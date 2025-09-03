@@ -53,7 +53,7 @@ export default function Herovideo() {
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
         <div className="text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
+          <h1 className="font-quattrocento text-4xl md:text-6xl font-bold text-white drop-shadow-xl">
             Exeter Hotel & Spa
           </h1>
         </div>
