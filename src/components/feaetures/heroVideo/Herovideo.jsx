@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger, SplitText } from "gsap/all";
 
 import herovideo from "/videos/exeter-hero.mp4";
 
@@ -14,13 +14,24 @@ export default function Herovideo() {
     const section = sectionRef.current;
     const video = videoRef.current;
     const overlay = overlayRef.current;
+    const heroSplit = new SplitText(".title", { type: "chars, lines" });
 
+    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
     gsap.set(video, {
       transformOrigin: "right center",
       willChange: "transform",
     });
 
     gsap.set(overlay, { willChange: "opacity, transform" });
+
+    gsap.from(heroSplit.chars, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1.8,
+      ease: "expo.out",
+      stagger: 0.06,
+      delay: 0.25,
+    });
 
     gsap
       .timeline({
@@ -53,7 +64,7 @@ export default function Herovideo() {
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
         <div className="text-center px-6">
-          <h1 className="font-quattrocento text-4xl md:text-6xl font-bold text-white drop-shadow-xl">
+          <h1 className="title font-quattrocento text-4xl md:text-6xl font-bold text-white drop-shadow-xl">
             Exeter Hotel & Spa
           </h1>
         </div>
