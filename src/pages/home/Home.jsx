@@ -1,10 +1,9 @@
-import Herovideo from "../../components/feaetures/heroVideo/Herovideo";
+import HeroVideoDemo from "../../components/feaetures/heroVideo/HeroVideoDemo";
 
 export default function Home() {
   return (
     <>
-      <Herovideo />
-      <h2 className="m-44">askdfjs;adklfjsad;lkfj</h2>
+      <HeroVideoDemo />
     </>
   );
 }
