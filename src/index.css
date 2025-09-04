@@ -2,4 +2,9 @@
 
 @theme {
   --font-quattrocento: "Quattrocento", serif;
+  --font-dancing: "Dancing Script", cursive;
+}
+
+body {
+  background-color: #272526;
 }

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         quattrocento: ['"Quattrocento"', "serif"],
+        dancing: ['"Dancing Script"', "cursive"],
       },
     },
   },
